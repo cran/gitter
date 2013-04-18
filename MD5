@@ -1,0 +1,12 @@
+4867570acf8a958784480693b53f055c *DESCRIPTION
+8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
+a370c657fc5cddffd67417889c25af09 *R/Help.R
+70447a7b1ab62529bf87cb629189341d *R/Main.R
+feabacc7f7543ee21acede594ff983dc *R/Peaks.R
+d41d8cd98f00b204e9800998ecf8427e *README.md
+a3f9ea42ace904ff55c0943853c63ee4 *build/BUILD.R
+e88e9039c4aebdbb3a09130e734c2134 *inst/extdata/sample.jpg
+ec330d73aa150a198ba08f780f4d6210 *inst/extdata/sample_dead.jpg
+afc1a6f47bc6f05752fddf4d8cbc2ad1 *man/gitter-package.Rd
+a08d834bef2ff9047eacc087183ec8ed *man/gitter.Rd
+b24284303d481ba74118647393089d5e *man/gitter.batch.Rd
