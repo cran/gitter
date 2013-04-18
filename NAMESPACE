@@ -1,1 +1,7 @@
-exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+import(jpeg)
+import(logging)
+import(ggplot2)
+import(EBImage)
+importFrom(PET, radon)
+importFrom(parallel, mclapply)
