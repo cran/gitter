@@ -1,5 +1,5 @@
-\name{gitter.plot}
-\alias{gitter.plot}
+\name{plot.gitter}
+\alias{plot.gitter}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Plot a gitter dat file 
@@ -8,13 +8,13 @@ Plot a gitter dat file
 This function will plot a heatmap or bubble plot of a data.frame produced by \code{\link{gitter}} or a dat file saved to disk.
 }
 \usage{
-gitter.plot(dat, title='', type='heatmap', low='turquoise', mid='black', high='yellow', 
-            show.text=F, text.color='white', norm=T, show.circ=T, circ.cutoff=0.6,
-            circ.color='white')
+\method{plot}{gitter}(x, title='', type='heatmap', low='turquoise', mid='black', high='yellow', 
+            show.text=F, text.color='white', norm=T, show.flags=T, 
+            flag.color='white', ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{dat}{
+  \item{x}{
     The data.frame produced by \code{\link{gitter}} or the path to a dat file saved by \code{\link{gitter}}.
   }
   \item{title}{
@@ -41,14 +41,14 @@ gitter.plot(dat, title='', type='heatmap', low='turquoise', mid='black', high='y
   \item{norm}{
     Logical indicating if colony sizes should be normalized by dividing colony sizes the middle mean of values and capping them between 0-2. Default is "TRUE".
   }
-  \item{show.circ}{
-    Logical indicating if dots should be overlaid on the plot for colonies with a circularity < X, where X is defined by circ.cutoff. Empty colonies are ignored. Default is "TRUE".
+  \item{show.flags}{
+    Logical indicating if dots should be overlaid on the plot for flagged colonies. Default is "TRUE".
   }
-  \item{circ.cutoff}{
-    Colonies with a circularity of less than this value are displayed as overlaid dots if show.circ is "TRUE". Default is 0.6.
+  \item{flag.color}{
+    Color of flag dot if show.flags is "TRUE". Default is "white".
   }
-  \item{circ.color}{
-    Color of circularity dot if show.circ is "TRUE". Default is "white".
+  \item{...}{
+    Additional arguments. Not used.
   }
 }
 %\details{
@@ -76,10 +76,12 @@ Omar Wagih \email{omar.wagih@utoronto.ca}
 \examples{
 # Get dat file path
 f = system.file("extdata", "sample.jpg.dat", package="gitter")
-# Show a heatmap
-gitter.plot(f, type='heatmap')
+# Read in path as a gitter data object
+g = gitter.read(f)
+# Plot a heatmap
+plot(g, type="heatmap")
 # Show a bubble plot
-gitter.plot(f, type='bubble', low='black', high='red')
+plot(g, type="bubble", low="black", high="red")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

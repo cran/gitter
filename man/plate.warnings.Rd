@@ -1,26 +1,26 @@
-\name{gitter.summary}
-\alias{gitter.summary}
+\name{plate.warnings}
+\alias{plate.warnings}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-View the summary of a gitter dat file
+Show any plate-level warnings associated with a \code{\link{gitter}} data object
 }
 \description{
-This function will show a brief summary of a data frame produced by \code{\link{gitter}}
+This function will show warnings associated with a \code{\link{gitter}} data object.
 }
 \usage{
-gitter.summary(d)
+plate.warnings(dat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{d}{
-  The data.frame produced by \code{\link{gitter}}.
+  \item{dat}{
+    The data.frame produced by \code{\link{gitter}}.
   }
 }
 %\details{
 %%  ~~ If necessary, more details than the description above ~~
 %}
 \value{
-Summary including the call made to \code{\link{gitter}}, colony size quantiles and more.
+Warnings associated with the gitter data object or NULL if no warnings.
 }
 %\references{
 %% ~put references to the literature/web site here ~
@@ -39,9 +39,10 @@ Omar Wagih \email{omar.wagih@utoronto.ca}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-# dat = gitter(file)
-# summary(dat)
+# dat = gitter("/path/to/image")
+# plate.warnings(dat)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ summary }
+\keyword{ warnings }
+\keyword{ plate }
