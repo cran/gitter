@@ -565,7 +565,13 @@ gitter <- function(image.file=file.choose(), plate.format=c(32,48), remove.noise
 
 
 .getFlags <- function(dat){
-  s = dat$size / median(dat$size)
+  size_median = median(dat$size)
+  if(size_median == 0){
+    s = dat$size
+  }else{
+    s = dat$size / size_median
+  }
+  
   c = dat$circularity
   n = nrow(dat)
   
